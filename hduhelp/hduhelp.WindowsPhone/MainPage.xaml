@@ -1,0 +1,118 @@
+﻿<Page
+    x:Class="hduhelp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hduhelp"
+    xmlns:control="using:hduhelp.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded"
+    >
+    <!--<Page.Background>
+        <SolidColorBrush Color="Black"/>
+    </Page.Background>-->
+    <Page.BottomAppBar>
+        <CommandBar IsTabStop="False" Background="#FF173884">
+            <!--<AppBarButton x:Name="abMe" Icon="Contact" Label="我" FontFamily="DengXian Light" />-->
+            <AppBarButton x:Name="abRefresh" Icon="Refresh" Label="刷新" FontFamily="DengXian Light" Click="abRefresh_Click" />
+            <AppBarButton x:Name="abLogoff" Icon="Switch" Label="注销" FontFamily="DengXian Light" Click="abLogoff_Click" />
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Name="AbsAbout" Label="关于" Click="absAbout_Click" />
+                <AppBarButton Name="AbsFeedBack" Label="反馈" Click="absFeedBack_Click" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="0,0,0,-60">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="60" />
+            <RowDefinition />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>     
+        <Grid Grid.RowSpan="2" Grid.Row="0" Background="#FF173884" />
+        <TextBlock Text="本周是第14周，期末考试就是下周！" Grid.Row="0" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,0,0" />
+        <Grid Grid.Row="2" Grid.RowSpan="2" Background="#FFFFFFFF" />
+        <Pivot x:Name="pvFunction" Grid.RowSpan="2" Grid.Row="1" Foreground="Black" Loaded="pvFunction_Loaded">
+            <PivotItem x:Name="pviNews" Margin="2,7,10,0">
+                <PivotItem.Header>
+                    <TextBlock  Text="资讯" Style="{StaticResource PivotItemHeader}" Margin="0,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="icNews" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="360" >
+                        <ItemsControl.Template>
+                            <ControlTemplate TargetType="ItemsControl">
+                                <ScrollViewer VerticalScrollBarVisibility="Visible">
+                                    <ItemsPresenter/>
+                                </ScrollViewer>
+                            </ControlTemplate>
+                        </ItemsControl.Template>
+                    </ItemsControl>
+
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Name="pviQuery" Margin="10,7,10,0" GotFocus="pviQuery_GotFocus">
+                <PivotItem.Header>
+                    <TextBlock Text="查询" Style="{StaticResource PivotItemHeader}" Margin="0,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="icQuery" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top">
+                        <ItemsControl.Template>
+                            <ControlTemplate TargetType="ItemsControl">
+                                <ScrollViewer VerticalScrollBarVisibility="Visible">
+                                    <ItemsPresenter/>
+                                </ScrollViewer>
+                            </ControlTemplate>
+                        </ItemsControl.Template>
+                    </ItemsControl>
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Name="pviSelectClass" Margin="10,7,10,0">
+                <PivotItem.Header>
+                    <TextBlock Text="选课" Style="{StaticResource PivotItemHeader}" Margin="0,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <!--<TextBlock FontSize="100" Foreground="#FF173884" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        敬<LineBreak />请<LineBreak />期<LineBreak />待
+                    </TextBlock>-->
+                    <WebView x:Name="wvSelectClass" Margin="10,7,10,7"  />
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Name="pviFunctions" Margin="10,7,10,0">
+                <PivotItem.Header>
+                    <TextBlock Text="功能" Style="{StaticResource PivotItemHeader}" Margin="0,5,0,0" />
+                </PivotItem.Header>
+                <Grid HorizontalAlignment="Center"  >
+                    <!--<Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="120" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="120" />
+                        <RowDefinition Height="120" />
+                        <RowDefinition Height="120" />
+                        <RowDefinition Height="120" />
+                        <RowDefinition Height="120" />
+                    </Grid.RowDefinitions>-->
+                    <!--<control:FunctionButtonControl Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" Tapped="FunctionButtonControl_Tapped" />-->
+                    <!--<Button Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="5,0" VerticalContentAlignment="Bottom" Padding="0" HorizontalContentAlignment="Right" UseLayoutRounding="True" Background="#FF173884" BorderThickness="1">
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="\Assets\library.png" Margin="-12,8,12,15.833" Grid.RowSpan="2" />
+                            <TextBlock Grid.Row="1" Text="图书馆" Foreground="White" Margin="32,30.167,-32,-30.167" />
+                        </Grid>
+                    </Button>-->
+                    <TextBlock FontSize="100" Foreground="#FF173884" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        敬<LineBreak />请<LineBreak />期<LineBreak />待
+                    </TextBlock>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>

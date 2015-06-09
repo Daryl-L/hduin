@@ -1,0 +1,71 @@
+﻿<UserControl
+    x:Class="hduhelp.Controls.WholeWeekClassControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hduhelp.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Grid>
+        <Pivot Margin="0,0,0,0" x:Name="PvClassTable">
+            <PivotItem Margin="0,0,0,0" x:Name="PviMon">
+                <PivotItem.Header>
+                    <TextBlock Text="周一" Foreground="#FF173884" FontFamily="DengXian Light" FontSize="20" Margin="-10,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="IcMon" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </PivotItem>
+            <PivotItem Margin="0,0,0,0" x:Name="PviTue">
+                <PivotItem.Header>
+                    <TextBlock Text="周二" Foreground="#FF173884" FontFamily="DengXian Light" FontSize="20" Margin="-10,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="IcTue" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </PivotItem>
+            <PivotItem Margin="0,0,0,0" x:Name="PviWed">
+                <PivotItem.Header>
+                    <TextBlock Text="周三" Foreground="#FF173884" FontFamily="DengXian Light" FontSize="20" Margin="-10,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="IcWed" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </PivotItem>
+            <PivotItem Margin="0,0,0,0" x:Name="PviThu">
+                <PivotItem.Header>
+                    <TextBlock Text="周四" Foreground="#FF173884" FontFamily="DengXian Light" FontSize="20" Margin="-10,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="IcThu" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </PivotItem>
+            <PivotItem Margin="0,0,0,0" x:Name="PviFri">
+                <PivotItem.Header>
+                    <TextBlock Text="周五" Foreground="#FF173884" FontFamily="DengXian Light" FontSize="20" Margin="-10,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="IcFri" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </PivotItem>
+            <PivotItem Margin="0,0,0,0" x:Name="PviSat">
+                <PivotItem.Header>
+                    <TextBlock Text="周六" Foreground="#FF173884" FontFamily="DengXian Light" FontSize="20" Margin="-10,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="IcSat" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </PivotItem>
+            <PivotItem Margin="0,0,0,0" x:Name="PviSun">
+                <PivotItem.Header>
+                    <TextBlock Text="周日" Foreground="#FF173884" FontFamily="DengXian Light" FontSize="20" Margin="-10,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="IcSun" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" />
+                </Grid>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</UserControl>

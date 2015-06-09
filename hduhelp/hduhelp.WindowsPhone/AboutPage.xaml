@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="hduhelp.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hduhelp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 标题面板 -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="杭州电子科技大学" Foreground="#FF173884" Margin="0,12,0,0" FontSize="18.14" FontFamily="DengXian Light"/>
+            <TextBlock Text="关于" Margin="0,-6.5,0,26.5" Foreground="#FF173884" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" FontSize="57.5" FontFamily="DengXian Light"/>
+        </StackPanel>
+
+        <!--TODO: 应将内容放入以下网格-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <ItemsControl>
+                <ItemsControl.Template>
+                    <ControlTemplate TargetType="ItemsControl">
+                        <ScrollViewer VerticalScrollBarVisibility="Visible">
+                            <ItemsPresenter/>
+                        </ScrollViewer>
+                    </ControlTemplate>
+                 </ItemsControl.Template>
+                <TextBlock Foreground="Black" FontSize="18.14" FontFamily="DengXian Light" TextWrapping="WrapWholeWords">
+                    Version 1.2.0.0 beta
+                    <LineBreak /><LineBreak />
+                    其实对于我来说，写这种关于是最头疼的，就像高考写作文一样。
+                    <LineBreak /><LineBreak />
+                    写这个App的目的呢，一是边学习边做项目，可能学习的更快；再一个呢，对于某家园对wp的不屑。
+                    <LineBreak /><LineBreak />
+                    大三下了，准备考研了，要泡在六教了，有许多功能还没实现不知道能不能实现了。如果有空的话我应该会每周来一次更新，如果没有更新请多包涵啦。
+                    <LineBreak /><LineBreak />
+                    由于这是Universal App，和之前的API改动较大，所以代码基本上是边试边写的，所以写的太丑。。。过段时间我会将源码发布到GitHub上，大家一起来完善！
+                    <LineBreak /><LineBreak />
+                    最后，附上我的联系方式吧：<Hyperlink NavigateUri="mailto:sai9375@hotmail.com" Foreground="Blue">sai9375@hotmail.com</Hyperlink>
+                    <LineBreak /><LineBreak />
+                    最后的最后，看看某家园是如何嘲讽的吧。
+                </TextBlock>
+                <Image Source="Assets/172030nibbegfbfftfzx06_png_thumb.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Image Source="Assets/171602au7880ee0it4q2ug_png_thumb.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Image Source="Assets/172031p85qoqew5q88tlw6_png_thumb.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Image Source="Assets/171604mqn9ckzo8kyqqj9j_png_thumb.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </ItemsControl>
+        </Grid>
+    </Grid>
+</Page>

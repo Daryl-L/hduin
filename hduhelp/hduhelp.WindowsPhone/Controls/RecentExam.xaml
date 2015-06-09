@@ -1,0 +1,35 @@
+﻿<UserControl
+    x:Class="hduhelp.Controls.MakeUpExamControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hduhelp.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Border BorderThickness="0,1" CornerRadius="0">
+        <Border.BorderBrush>
+            <SolidColorBrush Color="#FFEBEBEB"/>
+        </Border.BorderBrush>
+        <Grid VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="38" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Source="/Assets/dot_orange.png" Width="20" Height="20" />
+            <TextBlock Text="{Binding Path=Type, Mode=OneTime}" Grid.Row="0" Grid.Column="1" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="DengXian Light" FontSize="23"  />
+            <TextBlock Text="{Binding Path=Name, Mode=OneTime}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="DengXian Light" FontSize="18"  />
+            <TextBlock Text="{Binding Path=Time, Mode=OneTime}" Grid.Row="2" Grid.Column="1" Foreground="#FFFF8B00" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="DengXian Light" FontSize="15"  />
+            <TextBlock Text="{Binding Path=Place, Mode=OneTime}" Grid.Row="3" Grid.Column="1" Foreground="#FF646464" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="DengXian Light" FontSize="15" />
+            <TextBlock Text="{Binding Path=Seat, Mode=OneTime}" Grid.Row="3" Grid.Column="3" Foreground="#FF646464" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="DengXian Light" FontSize="15" />
+            <TextBlock Text="座位：" Grid.Row="3" Grid.Column="2" Foreground="#FF646464" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="DengXian Light" FontSize="15" />
+        </Grid>
+    </Border>
+</UserControl>

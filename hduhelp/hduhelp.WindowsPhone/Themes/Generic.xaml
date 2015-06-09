@@ -1,0 +1,85 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hduhelp.Controls">
+
+    <Style TargetType="local:HolidayCountdownControl" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:HolidayCountdownControl">
+                    <Border BorderBrush="#FFEBEBEB" BorderThickness="0,0,0,1" Background="White" MinHeight="35" Visibility="Visible">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="85" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="15" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="15" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="15" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="15" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock HorizontalAlignment="Left" Text="距离开学还有" Grid.Column="0" Width="85" FontFamily="DengXian Light" FontSize="14" Foreground="Gray" Margin="2,10,0,0"/>
+                            <TextBlock Text="天" Grid.Column="2" FontFamily="DengXian Light" FontSize="14" Foreground="Gray" Margin="1,10,0,0"/>
+                            <TextBlock Text="时" Grid.Column="4" FontFamily="DengXian Light" FontSize="14" Foreground="Gray" Margin="1,10,0,0"/>
+                            <TextBlock Text="分" Grid.Column="6" FontFamily="DengXian Light" FontSize="14" Foreground="Gray" Margin="1,10,0,0"/>
+                            <TextBlock Text="秒" Grid.Column="8" FontFamily="DengXian Light" FontSize="14" Foreground="Gray" Margin="1,10,0,0"/>
+                            <TextBlock x:Name="tbDay" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontFamily="DengXian" FontSize="32" Height="35" Width="40" FontStretch="Expanded" Grid.Column="1" Margin="10,0,0,0"/>
+                            <TextBlock x:Name="tbHour" Grid.Column="3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontFamily="DengXian" FontSize="32" Height="35" Width="40" Margin="10,0,0,0"/>
+                            <TextBlock x:Name="tbMinute" Grid.Column="5" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontFamily="DengXian" FontSize="32" Height="35" Width="40" Margin="10,0,0,0"/>
+                            <TextBlock x:Name="tbSecond" Grid.Column="7" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontFamily="DengXian" FontSize="32" Height="35" Width="40" Margin="10,0,0,0"/>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:NewsControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:NewsControl">
+                    <Border BorderBrush="#FFEBEBEB" BorderThickness="0,0,0,1" Background="White" MinHeight="80" MinWidth="360">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="imgLogo" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Height="70" Width="70" />
+                            <TextBlock x:Name="tbTitle" Grid.Column="1" Grid.Row="0" FontFamily="DengXian Light" FontSize="23" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="NoWrap" />
+                            <TextBlock x:Name="tbDate" Grid.Column="1" Grid.Row="1" FontFamily="DengXian Light" FontSize="15" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    
+
+    <!--<Style TargetType="local:NewsTitleControl1">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:NewsTitleControl1">
+                    <Border BorderBrush="#FFEBEBEB" BorderThickness="0,1,0,1" Background="White" MinHeight="40" MinWidth="360">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="60" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="tbNewsTitle" Text="呵呵呵呵" Grid.Column="1" Foreground="#FF173884" FontFamily="DengXian" FontSize="20"  HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <Image Source="/Assets/more_logo_normal.png" Grid.Column="2" HorizontalAlignment="Left" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+</ResourceDictionary>

@@ -1,0 +1,4 @@
+MainPackage=D:\project\hduhelp\hduhelp\hduhelp.WindowsPhone\bin\Release\hduhelp.WindowsPhone_1.2.0.0_AnyCPU.appx
+SymbolPackage=D:\project\hduhelp\hduhelp\hduhelp.WindowsPhone\AppPackages\hduhelp.WindowsPhone_1.2.0.0_Test\hduhelp.WindowsPhone_1.2.0.0_AnyCPU.appxsym
+ResourcePack=D:\project\hduhelp\hduhelp\hduhelp.WindowsPhone\bin\Release\hduhelp.WindowsPhone_1.2.0.0_scale-100.appx
+ResourcePack=D:\project\hduhelp\hduhelp\hduhelp.WindowsPhone\bin\Release\hduhelp.WindowsPhone_1.2.0.0_scale-140.appx

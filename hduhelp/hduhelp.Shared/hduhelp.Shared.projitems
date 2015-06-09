@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f7ef613f-169e-4b25-8ae8-a858ecd8932b</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>hduhelp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\AESEncryptHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\FetchDataHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\HttpHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\JsonHelper\AccessTokenData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\JsonHelper\ClassData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\JsonHelper\ExamData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\JsonHelper\HduActivityData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\JsonHelper\LibraryCenterPersonData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\JsonHelper\MakeupExamData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\JsonHelper\OneCardCashData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ControlModel\HduNewsControl.xaml.cs">
+      <DependentUpon>HduNewsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ControlModel\NerSemesterCountdownControl.xaml.cs">
+      <DependentUpon>NerSemesterCountdownControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DataModel\ClassDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DataModel\LibraryLendDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DataModel\NewsTitleDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DataModel\OneCardCashDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DataModel\QueryTitleDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DataModel\RecentExamDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SendEmail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Model\ControlModel\HduNewsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Model\ControlModel\NerSemesterCountdownControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

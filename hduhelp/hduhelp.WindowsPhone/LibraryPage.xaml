@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="hduhelp.LibraryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hduhelp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar IsTabStop="False" Background="#FF173884">
+            <!--<AppBarButton x:Name="abMe" Icon="Contact" Label="我" FontFamily="DengXian Light" />-->
+            <AppBarButton x:Name="abRefresh" Icon="Refresh" Label="刷新" FontFamily="DengXian Light" Click="abRefresh_Click" />
+            <!--<AppBarButton x:Name="abSearch" Icon="Save" Label="搜索" FontFamily="DengXian Light" />-->
+            <!--<AppBarButton x:Name="AbLogoff" Icon="Switch" Label="注销" FontFamily="DengXian Light" Click="abLogoff_Click" />
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Name="AbsAbout" Label="关于" Click="absAbout_Click" />
+                <AppBarButton Name="AbsFeedBack" Label="反馈" Click="absFeedBack_Click" />
+            </CommandBar.SecondaryCommands>-->
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="0,0,0,-60">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="60" />
+            <RowDefinition />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid Grid.RowSpan="2" Grid.Row="0" Background="#FF173884" />
+        <Grid Grid.Row="2" Grid.RowSpan="2" Background="#FFFFFFFF" />
+        <Pivot x:Name="PvFunction" Grid.RowSpan="2" Grid.Row="1" Foreground="Black" Loaded="PvFunction_Loaded">
+            <PivotItem x:Name="PviLend" Margin="2,7,10,0">
+                <PivotItem.Header>
+                    <TextBlock  Text="我的借阅" Style="{StaticResource PivotItemHeader}" Margin="0,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="IcLend" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="360" >
+                        <ItemsControl.Template>
+                            <ControlTemplate TargetType="ItemsControl">
+                                <ScrollViewer VerticalScrollBarVisibility="Visible">
+                                    <ItemsPresenter/>
+                                </ScrollViewer>
+                            </ControlTemplate>
+                        </ItemsControl.Template>
+                    </ItemsControl>
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Name="PviReserve" Margin="2,7,10,0">
+                <PivotItem.Header>
+                    <TextBlock  Text="我的预约" Style="{StaticResource PivotItemHeader}" Margin="0,5,0,0" />
+                </PivotItem.Header>
+                <Grid>
+                    <ItemsControl x:Name="IcReserve" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="360" >
+                        <ItemsControl.Template>
+                            <ControlTemplate TargetType="ItemsControl">
+                                <ScrollViewer VerticalScrollBarVisibility="Visible">
+                                    <ItemsPresenter/>
+                                </ScrollViewer>
+                            </ControlTemplate>
+                        </ItemsControl.Template>
+                    </ItemsControl>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

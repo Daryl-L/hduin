@@ -1,0 +1,16 @@
+﻿<Application
+    x:Class="hduhelp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hduhelp"
+    RequestedTheme="Dark">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="PivotItemHeader" TargetType="TextBlock">
+                <!--<Setter Property="Foreground" Value="#FF173884"/>-->
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="FontFamily" Value="DengXian Light" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,21 @@
+﻿<UserControl
+    x:Class="hduhelp.Controls.NewsTitleControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hduhelp.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Height="50">
+
+    <Border BorderThickness="0,1,0,1" CornerRadius="0">
+        <Border.BorderBrush>
+            <SolidColorBrush Color="#FFEBEBEB"/>
+        </Border.BorderBrush>
+        <Grid>
+            <TextBlock Text="{Binding Path=Title, Mode=OneTime}" FontFamily="DenXian" FontSize="20" Foreground="#FF646464" Height="20" VerticalAlignment="Center" Margin="10,9,186,9" />
+            <!--<Image x:Name="image" Height="38" Source="ms-appx:///Assets/more_logo_normal.png" Margin="378,9,0,9" />-->
+            <Image x:Name="image" HorizontalAlignment="Right" Height="20" VerticalAlignment="Center" Width="20" Source="ms-appx:///Assets/more_logo_normal.png"/>
+        </Grid>
+    </Border>
+</UserControl>
